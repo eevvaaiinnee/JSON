@@ -192,14 +192,15 @@ function createe(incomingJSON) {
     entertainmentContainer.appendChild(newDIV);
   }
 
+  let newLink = document.createElement("A");
+  newLink.classList.add("linkk");
+  newLink.href = incomingJSON['Link'];
+  newLink.target = "_blank";
+  newDIV.appendChild(newLink);
   let newImage = document.createElement("IMG");
   newImage.classList.add("imagee");
   newImage.src = incomingJSON['Image'];
-  newDIV.appendChild(newImage);
-  // let newLink = document.createElement("A");
-  // newLink.classList.add("linkk");
-  // newLink.src = incomingJSON['Link'];
-  // newImage.appendChild(newLink);
+  newLink.appendChild(newImage);
 
   let newName = document.createElement("P");
   newName.classList.add("namee");
